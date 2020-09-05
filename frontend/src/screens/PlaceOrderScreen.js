@@ -15,9 +15,9 @@ function PlaceOrderScreen(props) {
     props.history.push("/payment");
   }
   const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
-  const shippingPrice = itemsPrice > 100 ? 0 : 10;
-  const taxPrice = 0.15 * itemsPrice;
-  const totalPrice = itemsPrice + shippingPrice + taxPrice;
+  // const shippingPrice = itemsPrice > 100 ? 0 : 10;
+  // const taxPrice = 0.15 * itemsPrice;
+  const totalPrice = itemsPrice;
 
   const dispatch = useDispatch();
 
@@ -29,8 +29,8 @@ function PlaceOrderScreen(props) {
         shipping,
         payment,
         itemsPrice,
-        shippingPrice,
-        taxPrice,
+        // shippingPrice,
+        // taxPrice,
         totalPrice,
       })
     );
