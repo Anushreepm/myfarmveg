@@ -39,7 +39,7 @@ function OrderScreen(props) {
             <h3>Shipping</h3>
             <div>
               {order.shipping.address}, {order.shipping.city},
-              {order.shipping.postalCode}, {order.shipping.country},
+              {order.shipping.postalCode}, {order.shipping.phonenumber},
             </div>
             <div>
               {order.isDelivered

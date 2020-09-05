@@ -8,13 +8,13 @@ function ShippingScreen(props) {
   const [address, setAddress] = useState("");
   const [city, setCity] = useState("");
   const [postalCode, setPostalCode] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const [phonenumber, setPhonenumber] = useState("");
 
   const dispatch = useDispatch();
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(saveShipping({ address, city, postalCode, phoneNumber }));
+    dispatch(saveShipping({ address, city, postalCode, phonenumber }));
     props.history.push("payment");
   };
   return (
@@ -55,12 +55,12 @@ function ShippingScreen(props) {
               ></input>
             </li>
             <li>
-              <label htmlFor="phoneNumber">Phone Number</label>
+              <label htmlFor="phonenumber">Phone Number</label>
               <input
                 type="text"
-                name="phoneNumber"
-                id="phoneNumber"
-                onChange={(e) => setPhoneNumber(e.target.value)}
+                name="phonenumber"
+                id="phonenumber"
+                onChange={(e) => setPhonenumber(e.target.value)}s
               ></input>
             </li>
 
