@@ -50,7 +50,7 @@ function PlaceOrderScreen(props) {
             <h3>Shipping</h3>
             <div>
               {cart.shipping.address}, {cart.shipping.city},
-              {cart.shipping.postalCode}, {cart.shipping.country},
+              {cart.shipping.postalCode}, {cart.shipping.phoneNumber},
             </div>
           </div>
           <div>
@@ -101,14 +101,14 @@ function PlaceOrderScreen(props) {
               <div>Items</div>
               <div>Rs. {itemsPrice}</div>
             </li>
-            <li>
+            {/* <li>
               <div>Shipping</div>
               <div>Rs. {shippingPrice}</div>
             </li>
             <li>
               <div>Tax</div>
               <div>Rs. {taxPrice}</div>
-            </li>
+            </li> */}
             <li>
               <div>Order Total</div>
               <div>Rs. {totalPrice}</div>
