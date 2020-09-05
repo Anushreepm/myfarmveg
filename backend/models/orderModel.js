@@ -3,7 +3,7 @@ const shippingSchema = {
   address: { type: String, required: true },
   city: { type: String, required: true },
   postalCode: { type: String, required: true },
-  phonenumber: { type: String, required: true },
+  phonenumber: { type: Number, required: true },
 };
 
 const paymentSchema = {
@@ -29,8 +29,8 @@ const orderSchema = new mongoose.Schema(
     shipping: shippingSchema,
     payment: paymentSchema,
     itemsPrice: { type: Number },
-    taxPrice: { type: Number },
-    shippingPrice: { type: Number },
+    // taxPrice: { type: Number },
+    // shippingPrice: { type: Number },
     totalPrice: { type: Number },
     isPaid: { type: Boolean, default: false },
     paidAt: { type: Date },
