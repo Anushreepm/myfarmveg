@@ -25,6 +25,7 @@ function ShippingScreen(props) {
           <ul className="form-container">
             <li>
               <h2>Shipping</h2>
+              <h3>(All fields are mandatory)</h3>
             </li>
 
             <li>
@@ -60,7 +61,8 @@ function ShippingScreen(props) {
                 type="text"
                 name="phonenumber"
                 id="phonenumber"
-                onChange={(e) => setPhonenumber(e.target.value)}s
+                onChange={(e) => setPhonenumber(e.target.value)}
+                s
               ></input>
             </li>
 
