@@ -31,9 +31,8 @@ function App() {
           <div className="brand">
             <button onClick={openMenu}>&#9776;</button>
             <Link to="/">MyFarmVeg</Link>
-            {/* <h2>ನಮ್ಮ ತೋಟದ ತರಕಾರಿ</h2> */}
           </div>
-          <div className="header kannada">
+          <div className="header-kannada">
             <h2>ನಮ್ಮ ತೋಟದ ತರಕಾರಿ</h2>
           </div>
           <div className="header-links">
