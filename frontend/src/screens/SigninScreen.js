@@ -59,7 +59,7 @@ function SigninScreen(props) {
               Signin
             </button>
           </li>
-          <li>New to MyFarm Veg?</li>
+          <li>New to MyfarmVeg?</li>
           <li>
             <Link
               to={
@@ -67,7 +67,7 @@ function SigninScreen(props) {
               }
               className="button secondary text-center"
             >
-              Create your MYFarm Veg account
+              Create your MyfarmVeg account
             </Link>
           </li>
         </ul>
