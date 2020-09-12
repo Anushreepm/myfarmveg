@@ -36,7 +36,7 @@ function App() {
             <h2>ನಮ್ಮ ತೋಟದ ತರಕಾರಿ</h2>
           </div>
           <div className="header-links">
-            <a href="cart.html">Cart</a>
+            <a href="/cart/cart.html">Cart</a>
             {userInfo ? (
               <Link to="/profile">{userInfo.name}</Link>
             ) : (
