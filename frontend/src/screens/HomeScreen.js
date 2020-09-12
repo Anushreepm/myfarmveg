@@ -73,6 +73,40 @@ function HomeScreen(props) {
                 </div>
                 <div className="product-brand">{product.brand}</div>
                 <div className="product-price">Rs. {product.price}</div>
+                <div className="details-action">
+                  <ul>
+                    <li>Price: {product.price}</li>
+                    <li>
+                      Status:{" "}
+                      {product.countInStock > 0 ? "In Stock" : "Unavailable."}
+                    </li>
+                    <li>
+                      Qty:{" "}
+                      <select
+                        value={qty}
+                        onChange={(e) => {
+                          setQty(e.target.value);
+                        }}
+                      >
+                        {[...Array(product.countInStock).keys()].map((x) => (
+                          <option key={x + 1} value={x + 1}>
+                            {x + 1}
+                          </option>
+                        ))}
+                      </select>
+                    </li>
+                    <li>
+                      {product.countInStock > 0 && (
+                        <button
+                          onClick={handleAddToCart}
+                          className="button primary"
+                        >
+                          Add to Cart
+                        </button>
+                      )}
+                    </li>
+                  </ul>
+                </div>
                 <div className="product-rating">
                   <Rating
                     value={product.rating}
