@@ -6,6 +6,7 @@ import { listProducts } from "../actions/productActions";
 import Rating from "../components/Rating";
 
 function HomeScreen(props) {
+  const [qty, setQty] = useState(1);
   const [searchKeyword, setSearchKeyword] = useState("");
   const [sortOrder, setSortOrder] = useState("");
   const category = props.match.params.id ? props.match.params.id : "";
@@ -27,6 +28,9 @@ function HomeScreen(props) {
   const sortHandler = (e) => {
     setSortOrder(e.target.value);
     dispatch(listProducts(category, searchKeyword, sortOrder));
+  };
+  const handleAddToCart = () => {
+    props.history.push("/cart/" + props.match.params.id + "?qty=" + qty);
   };
 
   return (
